@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cryptohunter"
+version = "1.0.0"
+description = "Detecta automáticamente el cifrado o codificación de un texto y lo descifra (estilo CyberChef Magic)."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+dependencies = []
+keywords = ["cryptography", "decoder", "cipher", "base64", "caesar", "vigenere"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+cryptohunter = "cryptohunter.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["cryptohunter*"]
